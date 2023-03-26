@@ -138,6 +138,10 @@ class FlutterMapTileCaching {
   /// respectively.
   static FlutterMapTileCaching? _instance;
 
+  /// Allow mocking this class for testing purposes
+  @visibleForTesting
+  static set instance(FlutterMapTileCaching instance) => _instance = instance;
+
   /// Get the configured instance of [FlutterMapTileCaching], after
   /// [FlutterMapTileCaching.initialise] has been called, for further actions
   static FlutterMapTileCaching get instance {
